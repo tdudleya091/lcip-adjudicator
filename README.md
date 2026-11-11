@@ -7,7 +7,7 @@ The UI talks to Python in-process, and the optional `--browser` mode listens on 
 
 > **Unofficial fan project.** Not affiliated with or endorsed by the publishers of *Littoral Commander*. You need
 > the game itself to play. Unit values and situations in `data/` are house settings and can be edited freely.
-> If you want to get the latest version you can go to the Dietz Foundation's website at https://dietzfoundation-org.square.site/product/littoral-indo-pac-2nd-edition
+> If you want to get the latest version you can go to the Dietz Foundation's website at [https://dietzfoundation-org.square.site/product/littoral-indo-pac-2nd-edition](https://dietzfoundation-org.square.site/product/littoral-indo-pac-2nd-edition/3IDU3GFKNYFFLLR3J3ER4YPC)
 > This is for version 1.7 so if you have any rule updates, please understand it is for version 1.7 which I have.
 
 ## Get it
