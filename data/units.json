@@ -1,0 +1,910 @@
+{
+  "_readme": "Unit types and starting values. A d20 roll succeeds when it is at or under 'roll'. Each weapon draws from a supply slot ('supply' = slot key) or has unlimited supply (null). Submarine torpedoes are unlimited; their LRS uses supply. Edit freely; unit ids are 'team:name'.",
+  "types": [
+    {
+      "id": "blue_log1",
+      "team": "blue",
+      "label": "Supply unit type 1",
+      "category": "logistics",
+      "hp": 1,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "Supply",
+          "start": 8
+        }
+      ],
+      "weapons": [],
+      "units": [
+        "1 Fox",
+        "2 Fox",
+        "3 Fox"
+      ]
+    },
+    {
+      "id": "blue_log2",
+      "team": "blue",
+      "label": "Supply unit type 2",
+      "category": "logistics",
+      "hp": 3,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "Supply",
+          "start": 20
+        }
+      ],
+      "weapons": [],
+      "units": [
+        "Lima",
+        "Kilo",
+        "Golf"
+      ]
+    },
+    {
+      "id": "blue_ada",
+      "team": "blue",
+      "label": "Air defense",
+      "category": "ada",
+      "hp": 2,
+      "notes": "Close-range intercept (type 1) is unlimited; long-range intercept (type 2) uses the 10 supply.",
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "Long-range intercept",
+          "start": 10
+        }
+      ],
+      "weapons": [
+        {
+          "key": "ada_close",
+          "kind": "intercept",
+          "label": "Intercept type 1 (close range)",
+          "roll": 6,
+          "supply": null
+        },
+        {
+          "key": "ada_long",
+          "kind": "intercept",
+          "label": "Intercept type 2 (long range)",
+          "roll": 13,
+          "supply": "s1"
+        }
+      ],
+      "units": [
+        "1:1 Delta",
+        "1:2 Delta",
+        "2:1 Delta",
+        "2:2 Delta",
+        "3:1 Delta",
+        "3:2 Delta",
+        "1:1 Echo",
+        "1:2 Echo",
+        "2:1 Echo",
+        "2:2 Echo",
+        "3:1 Echo",
+        "3:2 Echo"
+      ]
+    },
+    {
+      "id": "blue_armor",
+      "team": "blue",
+      "label": "Armor",
+      "category": "ground",
+      "hp": 2,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "Close assault",
+          "start": 5
+        },
+        {
+          "key": "s2",
+          "label": "LRS",
+          "start": 2
+        }
+      ],
+      "weapons": [
+        {
+          "key": "close",
+          "kind": "close",
+          "label": "Close assault",
+          "roll": 8,
+          "supply": "s1"
+        },
+        {
+          "key": "lrs",
+          "kind": "lrs",
+          "label": "LRS",
+          "roll": 8,
+          "supply": "s2"
+        }
+      ],
+      "units": [
+        "1:1 Bravo",
+        "1:2 Bravo",
+        "2:1 Bravo",
+        "2:2 Bravo",
+        "3:1 Bravo",
+        "3:2 Bravo"
+      ]
+    },
+    {
+      "id": "blue_inf",
+      "team": "blue",
+      "label": "Infantry",
+      "category": "ground",
+      "hp": 2,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "Close assault",
+          "start": 5
+        },
+        {
+          "key": "s2",
+          "label": "LRS",
+          "start": 1
+        }
+      ],
+      "weapons": [
+        {
+          "key": "close",
+          "kind": "close",
+          "label": "Close assault",
+          "roll": 6,
+          "supply": "s1"
+        },
+        {
+          "key": "lrs",
+          "kind": "lrs",
+          "label": "LRS",
+          "roll": 6,
+          "supply": "s2"
+        }
+      ],
+      "units": [
+        "1 Alpha",
+        "2 Alpha",
+        "3 Alpha",
+        "4 Alpha",
+        "1 Victor",
+        "2 Victor",
+        "3 Victor",
+        "4 Victor"
+      ]
+    },
+    {
+      "id": "blue_rocket",
+      "team": "blue",
+      "label": "Rocket",
+      "category": "rocket",
+      "hp": 2,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "Type 1 LRS",
+          "start": 3
+        },
+        {
+          "key": "s2",
+          "label": "Type 2 LRS",
+          "start": 6
+        }
+      ],
+      "weapons": [
+        {
+          "key": "lrs1",
+          "kind": "lrs",
+          "label": "Type 1 LRS (long range)",
+          "roll": 12,
+          "supply": "s1"
+        },
+        {
+          "key": "lrs2",
+          "kind": "lrs",
+          "label": "Type 2 LRS (close range)",
+          "roll": 10,
+          "supply": "s2"
+        }
+      ],
+      "units": [
+        "1:1 Charlie",
+        "1:2 Charlie",
+        "2:1 Charlie",
+        "2:2 Charlie",
+        "3:1 Charlie",
+        "3:2 Charlie",
+        "1:1 Whiskey",
+        "1:2 Whiskey",
+        "2:1 Whiskey",
+        "2:2 Whiskey"
+      ]
+    },
+    {
+      "id": "blue_ship1",
+      "team": "blue",
+      "label": "Ship type 1 (DDG)",
+      "category": "ship",
+      "hp": 2,
+      "asw": true,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "LRS",
+          "start": 10
+        },
+        {
+          "key": "s2",
+          "label": "Intercept",
+          "start": 10
+        },
+        {
+          "key": "s3",
+          "label": "Aegis",
+          "start": 4
+        }
+      ],
+      "weapons": [
+        {
+          "key": "lrs",
+          "kind": "lrs",
+          "label": "LRS",
+          "roll": 14,
+          "supply": "s1"
+        },
+        {
+          "key": "intercept",
+          "kind": "intercept",
+          "label": "Intercept",
+          "roll": 14,
+          "supply": "s2"
+        },
+        {
+          "key": "aegis",
+          "kind": "intercept",
+          "label": "Aegis intercept",
+          "roll": 14,
+          "supply": "s3"
+        }
+      ],
+      "units": [
+        "DDG-56",
+        "DDG-85",
+        "DDG-90",
+        "DDG-93"
+      ]
+    },
+    {
+      "id": "blue_ship2",
+      "team": "blue",
+      "label": "Ship type 2 (DDGX)",
+      "category": "ship",
+      "hp": 3,
+      "asw": true,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "LRS",
+          "start": 15
+        },
+        {
+          "key": "s2",
+          "label": "Intercept",
+          "start": 12
+        }
+      ],
+      "weapons": [
+        {
+          "key": "lrs",
+          "kind": "lrs",
+          "label": "LRS",
+          "roll": 14,
+          "supply": "s1"
+        },
+        {
+          "key": "intercept",
+          "kind": "intercept",
+          "label": "Intercept",
+          "roll": 14,
+          "supply": "s2"
+        }
+      ],
+      "units": [
+        "DDGX-101",
+        "DDGX-102",
+        "DDGX-103",
+        "DDGX-104"
+      ]
+    },
+    {
+      "id": "blue_sub_virginia",
+      "team": "blue",
+      "label": "Submarine (Virginia)",
+      "category": "sub",
+      "hp": 1,
+      "detect": 7,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "LRS",
+          "start": 6
+        }
+      ],
+      "weapons": [
+        {
+          "key": "lrs",
+          "kind": "lrs",
+          "label": "LRS",
+          "roll": 14,
+          "supply": "s1"
+        },
+        {
+          "key": "torpedo",
+          "kind": "torpedo",
+          "label": "Torpedo",
+          "roll": 14,
+          "supply": null
+        }
+      ],
+      "units": [
+        "Virginia"
+      ]
+    },
+    {
+      "id": "blue_sub_ohio",
+      "team": "blue",
+      "label": "Submarine (Ohio)",
+      "category": "sub",
+      "hp": 1,
+      "detect": 10,
+      "notes": "HP not given in the spec; assumed 1 like Virginia.",
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "LRS",
+          "start": 18
+        }
+      ],
+      "weapons": [
+        {
+          "key": "lrs",
+          "kind": "lrs",
+          "label": "LRS",
+          "roll": 14,
+          "supply": "s1"
+        },
+        {
+          "key": "torpedo",
+          "kind": "torpedo",
+          "label": "Torpedo",
+          "roll": 12,
+          "supply": null
+        }
+      ],
+      "units": [
+        "Ohio"
+      ]
+    },
+    {
+      "id": "red_sub_sui",
+      "team": "red",
+      "label": "Submarine (Sui class)",
+      "category": "sub",
+      "hp": 1,
+      "detect": 13,
+      "notes": "HP not given in the spec; assumed 1.",
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "LRS",
+          "start": 6
+        }
+      ],
+      "weapons": [
+        {
+          "key": "lrs",
+          "kind": "lrs",
+          "label": "LRS",
+          "roll": 14,
+          "supply": "s1"
+        },
+        {
+          "key": "torpedo",
+          "kind": "torpedo",
+          "label": "Torpedo",
+          "roll": 12,
+          "supply": null
+        }
+      ],
+      "units": [
+        "Sui-1",
+        "Sui-2"
+      ]
+    },
+    {
+      "id": "red_sub_shang",
+      "team": "red",
+      "label": "Submarine (Shang II)",
+      "category": "sub",
+      "hp": 1,
+      "detect": 16,
+      "notes": "HP not given in the spec; assumed 1.",
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "LRS",
+          "start": 4
+        }
+      ],
+      "weapons": [
+        {
+          "key": "lrs",
+          "kind": "lrs",
+          "label": "LRS",
+          "roll": 14,
+          "supply": "s1"
+        },
+        {
+          "key": "torpedo",
+          "kind": "torpedo",
+          "label": "Torpedo",
+          "roll": 10,
+          "supply": null
+        }
+      ],
+      "units": [
+        "Shang II"
+      ]
+    },
+    {
+      "id": "red_inf1",
+      "team": "red",
+      "label": "Infantry type 1",
+      "category": "ground",
+      "hp": 2,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "Close assault",
+          "start": 5
+        }
+      ],
+      "weapons": [
+        {
+          "key": "close",
+          "kind": "close",
+          "label": "Close assault",
+          "roll": 5,
+          "supply": "s1"
+        }
+      ],
+      "units": [
+        "1 Fox",
+        "2 Fox",
+        "3 Fox"
+      ]
+    },
+    {
+      "id": "red_inf2",
+      "team": "red",
+      "label": "Infantry type 2",
+      "category": "ground",
+      "hp": 2,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "Close assault",
+          "start": 5
+        }
+      ],
+      "weapons": [
+        {
+          "key": "close",
+          "kind": "close",
+          "label": "Close assault",
+          "roll": 6,
+          "supply": "s1"
+        }
+      ],
+      "units": [
+        "1 Charlie"
+      ]
+    },
+    {
+      "id": "red_inf3",
+      "team": "red",
+      "label": "Infantry type 3",
+      "category": "ground",
+      "hp": 2,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "Close assault",
+          "start": 5
+        }
+      ],
+      "weapons": [
+        {
+          "key": "close",
+          "kind": "close",
+          "label": "Close assault",
+          "roll": 10,
+          "supply": "s1"
+        }
+      ],
+      "units": [
+        "2 Charlie",
+        "3 Charlie"
+      ]
+    },
+    {
+      "id": "red_inf4",
+      "team": "red",
+      "label": "Infantry type 4",
+      "category": "ground",
+      "hp": 2,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "Close assault",
+          "start": 5
+        }
+      ],
+      "weapons": [
+        {
+          "key": "close",
+          "kind": "close",
+          "label": "Close assault",
+          "roll": 6,
+          "supply": "s1"
+        }
+      ],
+      "units": [
+        "1 Alpha",
+        "2 Alpha",
+        "3 Alpha",
+        "4 Alpha",
+        "1 Bravo",
+        "2 Bravo",
+        "3 Bravo",
+        "4 Bravo",
+        "1 Golf",
+        "2 Golf",
+        "3 Golf",
+        "4 Golf"
+      ]
+    },
+    {
+      "id": "red_armor",
+      "team": "red",
+      "label": "Armor",
+      "category": "ground",
+      "hp": 3,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "Close assault",
+          "start": 5
+        }
+      ],
+      "weapons": [
+        {
+          "key": "close",
+          "kind": "close",
+          "label": "Close assault",
+          "roll": 10,
+          "supply": "s1"
+        }
+      ],
+      "units": [
+        "1 Victor",
+        "2 Victor",
+        "1 Delta",
+        "2 Delta",
+        "3 Delta",
+        "4 Delta"
+      ]
+    },
+    {
+      "id": "red_rocket1",
+      "team": "red",
+      "label": "Rocket strike 1",
+      "category": "rocket",
+      "hp": 2,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "LRS",
+          "start": 3
+        }
+      ],
+      "weapons": [
+        {
+          "key": "lrs",
+          "kind": "lrs",
+          "label": "LRS",
+          "roll": 8,
+          "supply": "s1"
+        }
+      ],
+      "units": [
+        "2:1 Echo",
+        "2:2 Echo"
+      ]
+    },
+    {
+      "id": "red_rocket2",
+      "team": "red",
+      "label": "Rocket strike 2",
+      "category": "rocket",
+      "hp": 2,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "LRS",
+          "start": 3
+        }
+      ],
+      "weapons": [
+        {
+          "key": "lrs",
+          "kind": "lrs",
+          "label": "LRS",
+          "roll": 14,
+          "supply": "s1"
+        }
+      ],
+      "units": [
+        "3:1 Echo",
+        "3:2 Echo"
+      ]
+    },
+    {
+      "id": "red_rocket3",
+      "team": "red",
+      "label": "Rocket strike 3",
+      "category": "rocket",
+      "hp": 2,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "LRS",
+          "start": 8
+        }
+      ],
+      "weapons": [
+        {
+          "key": "lrs",
+          "kind": "lrs",
+          "label": "LRS",
+          "roll": 6,
+          "supply": "s1"
+        }
+      ],
+      "units": [
+        "1:1 Echo",
+        "1:2 Echo"
+      ]
+    },
+    {
+      "id": "red_ada",
+      "team": "red",
+      "label": "Air defense",
+      "category": "ada",
+      "hp": 2,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "Intercept",
+          "start": 4
+        }
+      ],
+      "weapons": [
+        {
+          "key": "intercept",
+          "kind": "intercept",
+          "label": "Intercept",
+          "roll": 7,
+          "supply": "s1"
+        }
+      ],
+      "units": [
+        "1:1 Kilo",
+        "1:2 Kilo"
+      ]
+    },
+    {
+      "id": "red_log",
+      "team": "red",
+      "label": "Supply unit",
+      "category": "logistics",
+      "hp": 1,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "Supply",
+          "start": 7
+        }
+      ],
+      "weapons": [],
+      "units": [
+        "1 Lima",
+        "2 Lima",
+        "3 Lima"
+      ]
+    },
+    {
+      "id": "red_ship1",
+      "team": "red",
+      "label": "Ship type 1 (T-76 · LHD)",
+      "category": "ship",
+      "hp": 2,
+      "asw": false,
+      "notes": "Intercept supply is unlimited (supply check 2). No ASW, so torpedoes skip the ASW check.",
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "LRS",
+          "start": 10
+        }
+      ],
+      "weapons": [
+        {
+          "key": "lrs",
+          "kind": "lrs",
+          "label": "LRS",
+          "roll": 7,
+          "supply": "s1"
+        },
+        {
+          "key": "intercept",
+          "kind": "intercept",
+          "label": "Intercept",
+          "roll": 4,
+          "supply": null
+        }
+      ],
+      "units": [
+        "T-76-201",
+        "T-76-202"
+      ]
+    },
+    {
+      "id": "red_ship2",
+      "team": "red",
+      "label": "Ship type 2 (T-55 · DDG)",
+      "category": "ship",
+      "hp": 2,
+      "asw": true,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "LRS",
+          "start": 16
+        },
+        {
+          "key": "s2",
+          "label": "Intercept type 1",
+          "start": 9
+        },
+        {
+          "key": "s3",
+          "label": "Intercept type 2",
+          "start": 6
+        }
+      ],
+      "weapons": [
+        {
+          "key": "lrs",
+          "kind": "lrs",
+          "label": "LRS",
+          "roll": 14,
+          "supply": "s1"
+        },
+        {
+          "key": "ada1",
+          "kind": "intercept",
+          "label": "Intercept type 1",
+          "roll": 14,
+          "supply": "s2"
+        },
+        {
+          "key": "ada2",
+          "kind": "intercept",
+          "label": "Intercept type 2",
+          "roll": 14,
+          "supply": "s3"
+        }
+      ],
+      "units": [
+        "T-55-102",
+        "T-55-103",
+        "T-55-104"
+      ]
+    },
+    {
+      "id": "red_ship3",
+      "team": "red",
+      "label": "Ship type 3 (T-54 · FFG)",
+      "category": "ship",
+      "hp": 2,
+      "asw": true,
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "LRS",
+          "start": 3
+        },
+        {
+          "key": "s2",
+          "label": "Intercept",
+          "start": 6
+        }
+      ],
+      "weapons": [
+        {
+          "key": "lrs",
+          "kind": "lrs",
+          "label": "LRS",
+          "roll": 10,
+          "supply": "s1"
+        },
+        {
+          "key": "intercept",
+          "kind": "intercept",
+          "label": "Intercept",
+          "roll": 12,
+          "supply": "s2"
+        }
+      ],
+      "units": [
+        "T-54-573",
+        "T-54-574",
+        "T-54-575"
+      ]
+    },
+    {
+      "id": "red_ship4",
+      "team": "red",
+      "label": "Ship type 4 (T-52 · DDG)",
+      "category": "ship",
+      "hp": 2,
+      "asw": false,
+      "notes": "ASW not listed for this ship in the torpedo rules; set asw to true if it should hunt subs.",
+      "supplies": [
+        {
+          "key": "s1",
+          "label": "LRS",
+          "start": 7
+        },
+        {
+          "key": "s2",
+          "label": "Intercept",
+          "start": 7
+        }
+      ],
+      "weapons": [
+        {
+          "key": "lrs",
+          "kind": "lrs",
+          "label": "LRS",
+          "roll": 14,
+          "supply": "s1"
+        },
+        {
+          "key": "intercept",
+          "kind": "intercept",
+          "label": "Intercept",
+          "roll": 14,
+          "supply": "s2"
+        }
+      ],
+      "units": [
+        "T-52-172",
+        "T-52-173",
+        "T-52-174"
+      ]
+    }
+  ]
+}

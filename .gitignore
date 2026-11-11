@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.pytest_cache/
+build/
+dist/
+*.tmp
+
+# local data and tooling
+*.json.bak
+.claude/

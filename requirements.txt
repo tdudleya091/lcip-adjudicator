@@ -1,0 +1,4 @@
+pywebview>=5.0
+# development / packaging
+pytest>=8
+pyinstaller>=6.0

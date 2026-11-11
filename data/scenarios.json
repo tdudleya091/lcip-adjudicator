@@ -1,0 +1,59 @@
+{
+  "_readme": "Preset situations. When 'version' goes up, the app rewrites the presets in your scenarios folder (a changed copy is kept as <name>.json.bak). Unit ids are 'team:name' from units.json. 'requires_landing' keeps a task force out of play until it is marked landed.",
+  "version": 2,
+  "scenarios": [
+    {"name": "Situation 1", "map": "", "preset": true,
+     "initiative": {"start": 0, "blue_wins_at": 10, "red_wins_at": -10},
+     "task_forces": [
+       {"name": "TF Miami", "team": "blue", "units": ["blue:1 Alpha", "blue:1:1 Bravo", "blue:1:1 Charlie"]},
+       {"name": "TF SF", "team": "blue", "units": ["blue:1:1 Delta", "blue:Lima", "blue:DDG-56"]},
+       {"name": "TF Beijing", "team": "red", "units": ["red:1 Alpha", "red:1:1 Kilo", "red:1 Delta"]},
+       {"name": "TF Shanghai", "team": "red", "units": ["red:3:1 Echo", "red:1 Lima", "red:T-55-102"]}]},
+    {"name": "Situation 2", "map": "", "preset": true,
+     "initiative": {"start": 0, "blue_wins_at": 10, "red_wins_at": -10},
+     "task_forces": [
+       {"name": "TF Chicago", "team": "blue", "units": ["blue:1:1 Charlie", "blue:1:2 Charlie", "blue:3:1 Charlie", "blue:1:1 Delta",
+                                                         "blue:1:2 Delta", "blue:1 Alpha", "blue:2 Alpha", "blue:Lima"]},
+       {"name": "TF NY", "team": "blue", "units": ["blue:2:1 Charlie", "blue:2:2 Charlie", "blue:3:2 Charlie", "blue:2:1 Delta",
+                                                    "blue:3 Alpha", "blue:4 Alpha"]},
+       {"name": "TF Beijing", "team": "red", "units": ["red:T-76-201", "red:T-54-573", "red:T-52-172", "red:T-55-103", "red:T-55-104"]},
+       {"name": "TF Shanghai", "team": "red", "units": ["red:1 Alpha", "red:2 Alpha", "red:3 Alpha", "red:4 Alpha", "red:1 Delta",
+                                                         "red:3 Charlie", "red:3:1 Echo", "red:3:2 Echo", "red:1 Lima", "red:2 Lima"]}]},
+    {"name": "Situation 3", "map": "", "preset": true,
+     "initiative": {"start": 0, "blue_wins_at": 10, "red_wins_at": -10},
+     "task_forces": [
+       {"name": "TF Miami", "team": "blue", "units": ["blue:DDG-90", "blue:DDG-93", "blue:DDGX-104"]},
+       {"name": "TF Guangzhou", "team": "red", "units": ["red:Sui-1", "red:Sui-2", "red:Shang II"]}]},
+    {"name": "Situation 4", "map": "", "preset": true,
+     "initiative": {"start": 0, "blue_wins_at": 10, "red_wins_at": -10},
+     "task_forces": [
+       {"name": "TF Houston", "team": "blue", "units": ["blue:1:1 Charlie", "blue:1:2 Charlie", "blue:2:1 Charlie", "blue:2:2 Charlie",
+                                                         "blue:1:1 Delta", "blue:1:2 Delta", "blue:Lima"]},
+       {"name": "TF SF", "team": "blue", "units": ["blue:DDG-85", "blue:DDG-90", "blue:DDGX-101", "blue:DDGX-102"]},
+       {"name": "TF Beijing", "team": "red", "units": ["red:T-76-201", "red:T-54-573", "red:T-52-172", "red:T-55-103", "red:T-55-104"]},
+       {"name": "TF Shanghai", "team": "red", "units": ["red:T-76-202", "red:T-54-574", "red:T-52-173", "red:T-52-174", "red:T-55-102"]}]},
+    {"name": "Situation 5", "map": "", "preset": true,
+     "initiative": {"start": 0, "blue_wins_at": 10, "red_wins_at": -10},
+     "task_forces": [
+       {"name": "TF NY", "team": "blue", "units": ["blue:1:1 Charlie", "blue:1:2 Charlie", "blue:2:1 Charlie", "blue:2:2 Charlie",
+                                                    "blue:1:1 Delta", "blue:1:2 Delta", "blue:Lima"]},
+       {"name": "TF SF", "team": "blue", "units": ["blue:DDG-56", "blue:DDG-90", "blue:DDGX-103", "blue:DDGX-104"]},
+       {"name": "TF Beijing", "team": "red", "units": ["red:T-76-201", "red:T-54-573", "red:T-52-172", "red:T-55-103", "red:T-55-104"]},
+       {"name": "TF Tianjin", "team": "red", "units": ["red:T-76-202", "red:T-54-574", "red:T-52-173", "red:T-52-174", "red:T-55-102"]}]},
+    {"name": "Situation 6", "map": "", "preset": true,
+     "initiative": {"start": 0, "blue_wins_at": 10, "red_wins_at": -10},
+     "task_forces": [
+       {"name": "TF Chicago", "team": "blue", "units": ["blue:1 Alpha", "blue:2 Alpha", "blue:1:1 Bravo", "blue:1:2 Bravo", "blue:1:1 Charlie",
+                                                         "blue:1:2 Charlie", "blue:3:1 Charlie", "blue:1:1 Delta", "blue:1:2 Delta", "blue:Lima"]},
+       {"name": "TF Houston", "team": "blue", "units": ["blue:3 Alpha", "blue:4 Alpha", "blue:2:1 Bravo", "blue:2:2 Bravo", "blue:2:1 Charlie",
+                                                         "blue:2:2 Charlie", "blue:3:2 Charlie", "blue:2:1 Delta", "blue:2:2 Delta", "blue:Kilo"]},
+       {"name": "TF SF", "team": "blue", "units": ["blue:DDG-85", "blue:DDG-90", "blue:DDGX-104"]},
+       {"name": "TF Beijing", "team": "red", "units": ["red:T-76-201", "red:T-54-573", "red:T-52-172", "red:T-55-103", "red:T-55-104"]},
+       {"name": "TF Tianjin", "team": "red", "units": ["red:T-76-202", "red:T-54-574", "red:T-54-575", "red:T-52-173", "red:T-52-174", "red:T-55-102"]},
+       {"name": "TF Shanghai", "team": "red", "requires_landing": true,
+        "units": ["red:1 Alpha", "red:2 Alpha", "red:3 Alpha", "red:4 Alpha", "red:1 Bravo", "red:2 Bravo", "red:3 Bravo", "red:4 Bravo",
+                  "red:1 Charlie", "red:2 Charlie", "red:3 Charlie", "red:1 Delta", "red:2 Delta", "red:3 Delta",
+                  "red:1 Golf", "red:2 Golf", "red:3 Golf", "red:4 Golf", "red:1 Victor", "red:2 Victor",
+                  "red:1 Lima", "red:2 Lima", "red:3 Lima"]}]}
+  ]
+}
